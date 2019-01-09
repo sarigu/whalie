@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:700');
+
+.scene{
+    background-color: rgb(132, 183, 250); 
+    width: 1264px;
+    height: 500px; 
+}
+
+h2{
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(253, 240, 121); 
+    text-align: center;
+}
+
+#whalie{
+    padding-top: 7.5em; 
+    margin-left:auto;
+    margin-right: auto; 
+    display: block;
+    opacity: 1; 
+}
+
+.btnGroup{
+    padding-top: 5em; 
+    padding-left: 18em; 
+}
+
+/*Dealing with the heading*/
+
+#heading.hideHeading9{
+    animation: hides 9s linear; 
+}
+
+@keyframes hides{
+    0%  {color: rgb(132, 183, 250); }
+    90% {color: rgb(132, 183, 250); }
+    100%{color: rgb(253, 240, 121);}
+}
+
+#heading.hideHeading{
+    animation: hides4 4.2s linear; 
+}
+
+@keyframes hides4{
+    0%  {color: rgb(132, 183, 250); }
+    90% {color: rgb(132, 183, 250); }
+    100%{color: rgb(253, 240, 121);}
+}
+
+/*Moving in and out of frame*/ 
+
+#whalie.isMoving{
+    animation: moves 8s linear; 
+}
+
+@keyframes moves{
+    0%{transform: translateX(-850px);}
+    100%{transform: translateX(1264px);}
+}
+
+/* Jumps up and down*/
+
+#whalie.isJumping{
+    animation: jumps 2.8s infinite cubic-bezier(.38,.33,.03,.85); 
+}
+
+@keyframes jumps {
+    0% {transform: translateY(201px); }
+    25%{transform: translateY(-100px);}   
+    50%{transform: translateY(201px);}
+    75%{transform: translateY(-65px);}
+    100%{transform: translateY(201px);}
+}
+
+/* Moves 30% in to the scene*/
+
+#whalie.isMovingTo30{
+    animation: movesInScene 4s ease;
+}
+
+@keyframes movesInScene{
+    0%{transform: translateX(-850px);}
+    100%{transform: translateX(-247.2px);}
+}
+
+/* Moves from 30% to slightly outside of the scene*/
+
+#whalie.isMovingFrom30{
+    animation: movesOutOfScene 4s cubic-bezier(.61,.43,.37,1.14); 
+}
+
+@keyframes movesOutOfScene{
+    0%{transform: translateX(-247.2px);}
+    100%{transform: translateX(550px);}
+}
+
+/*Jumps once*/
+
+#whalie.isJumpingOnce{
+    animation: jumpsOnce 2.1s cubic-bezier(.38,.33,.03,.85);
+}
+
+@keyframes jumpsOnce {
+    0% {transform: translateY(201px); }
+    50%{transform: translateY(-100px);}   
+    100%{transform: translateY(201px);}
+    
+}
+
+/*Fades away*/
+
+#whalie.isFading{
+    animation: fadesAway 7s ease-out; 
+}
+
+@keyframes fadesAway{
+    50% {opacity: 0.1;}  
+    100%{opacity: 1;} 
+}
+
+/*Whalie falls*/
+
+#whalie.isFalling{
+    animation: whalieFalls 2s ease-in; 
+}
+
+@keyframes whalieFalls{
+    0%{transform: skewY(0deg);}
+    10%{transform: skewY(-5deg);}
+    30% {transform: skewY(-10deg);}
+    50% {transform: skewY(-18deg); }
+    65% {transform: skewY(-15deg);}
+    75% {transform: translateY(50px);}
+    90% {transform: translateY(110px);}
+    100%{transform: translateY(200px);}
+}
+
+/*Whalie moves to 0*/
+
+#whalie.isMovingTo0{
+    animation: movesLeft 4s linear; 
+}
+
+@keyframes movesLeft{
+    to{
+        transform: translateX(-542px);
+    }
+}
+
+/*Shake it off*/
+
+#whalie.isShaking{
+    animation: shakesItOff 2s infinite; 
+}
+
+@keyframes shakesItOff{
+    0% {transform: scale(1,1);} 
+    30% {transform: scale(.95, 1.05);}
+    50% {transform: scale(1.05, .95);}
+    65% {transform: scale(.95, 1.05);}
+    75% {transform: scale(1.05, .95);}
+    100% {transform: scale(1,1);}
+}
+
+/*Speaking of*/
+
+#whalie.isSpeaking{
+    animation: speaksALittle 4s infinite; 
+}
+
+@keyframes speaksALittle{
+    0%  {transform: rotate(0deg);}
+    15% {transform: rotate(-5deg);}
+    30% {transform: rotate(0deg);}
+    50% {transform: rotate(-5deg);}
+    65% {transform: rotate(0deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
